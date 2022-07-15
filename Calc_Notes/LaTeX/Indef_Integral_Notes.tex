@@ -1,0 +1,127 @@
+\documentclass{article}
+\usepackage{amsmath, tikz, tcolorbox, array, multicol, sfmath, enumerate, pgfplots}
+\renewcommand{\familydefault}{\sfdefault}
+\pgfplotsset{compat=newest}
+\usetikzlibrary{arrows.meta}
+\everymath{\displaystyle}
+\tikzset{>=stealth}
+\usepackage[top = 0.25in, bottom = 0.25in, left = 1.25in, right = 1.25in]{geometry}
+\pagestyle{empty}
+\raggedright
+
+\newcounter{example}[section]
+\newenvironment{example}[1][]{\refstepcounter{example}\par\medskip
+   {\color{red}\textbf{Example~\theexample. #1}}}{\medskip}
+\newcommand{\dx}{\, \mathrm{d}x}
+
+\begin{document}
+
+\section*{Indefinite Integrals}
+
+\begin{tcolorbox}[colframe=orange!70!white, coltitle=black, title=\textbf{Summary}]
+\begin{enumerate}
+    \item 
+\end{enumerate}
+\end{tcolorbox}
+\vspace{1in}
+
+The WorkShop Company determines the marginal cost function for their designer suspenders is
+\[
+MC(x) = C'(x) = 2x  \quad [0, 10]
+\]
+where $x$ is the number of designer suspenders produced in thousands and $MC(x)$ is the marginal cost in thousands of dollars.   \newline\\
+
+\begin{itemize}
+    \item Given this information, how can we find the cost function?
+    \item We need to find a function $C(x)$ such that
+\[
+C'(x) = MC(x)
+\]
+    \item What function, when we take its derivative, gives us $2x$?
+    \item That function is the {\color{blue}\textbf{antiderivative}} of the function.
+        \subitem Antidifferentiation is the inverse of differentiation.
+\end{itemize}
+
+\begin{center}  \setlength{\extrarowheight}{6pt}
+    \begin{tabular}{ccc}    
+        Function & Derivative & Rule \\ \hline 
+        $f(x)=x^n$ & $f'(x)=n\cdot x^{n-1}$ & Power Rule \\
+        $f(x) = k$ & $f'(x) = 0$ & Constant Rule \\
+        $h(x) = f(x) \pm g(x)$ & $h'(x) = f'(x) \pm g'(x)$ & Sum and Difference Rules
+    \end{tabular}
+\end{center}
+
+What function has a derivative of $2x$? \\
+
+Other functions with derivative of $2x$:
+\begin{itemize}
+    \item $x^2 + 3$
+    \item $x^2 - 1.7$
+    \item $x^2 + \tfrac{1}{5}$
+\end{itemize}
+
+If $C$ is any real number, then $x^2 + C$ is the antiderivative of $2x$. \\
+
+$C$ is called an {\color{blue}\textbf{arbitrary constant}}.
+
+\begin{example}
+Determine if the function $F$ is the general antiderivative of the function $f$.
+\begin{enumerate}[(a)]
+    \item $F(x) = \tfrac{2}{3}x^{3/2} + 4x + C; \, f(x) = \sqrt{x}+4$
+    \item $f(x) = 2x^4 - x + C; \, f(x) = \tfrac{2}{3}x^3-1$
+\end{enumerate}
+\end{example}
+
+Another way to represent the general antiderivative of a function $f$ is by the {\color{blue}\textbf{indefinite integral}}
+\[
+\int f(x) \dx
+\]
+
+Note that, from Example 1a, $\int \left(\sqrt{x}+4\right) \dx = \tfrac{2}{3}x^{3/2}+4x+C$ \\
+
+\texttt{Power Rule for Integration}
+
+For $n \neq -1$,
+\[
+\int x^n \dx = \frac{1}{n+1}x^{n+1} + C
+\]
+
+\begin{example}
+Determine the following indefinite integrals.
+\begin{enumerate}[(a)]
+    \item $\int x^8 \dx$
+    \item $\int \sqrt[4]{x} \dx$
+    \item $\int \frac{1}{x^5} \dx$
+\end{enumerate}
+\end{example}
+
+\texttt{Constant Rule for Integration}
+
+If $k$ is a real number, then 
+\[
+\int k \dx = kx + C
+\]
+
+\texttt{Sum and Difference Rules for Integration}
+\[
+\int \left(f(x) \pm g(x)\right) \dx = \int f(x) \dx \pm \int g(x) \dx
+\]
+
+\begin{example}
+Determine each indefinite integral.
+\begin{enumerate}[(a)]
+    \item $\int \left(x^2 + 3\right) \dx$
+    \item $\int \left(\sqrt[3]{x} + 5\right) \dx$
+\end{enumerate}
+\end{example}
+
+\texttt{Coefficient Rule for Integration}
+\[
+\int c \cdot f(x) \dx = c \cdot \int f(x) \dx
+\]
+
+\begin{example}
+Determine $\int \left(-2t^3 + 3t + 5\right) \, \mathrm{d}t$
+\end{example}
+
+\end{document}

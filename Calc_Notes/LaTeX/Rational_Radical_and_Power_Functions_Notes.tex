@@ -1,0 +1,160 @@
+\documentclass{article}
+\usepackage{amsmath, tikz, tcolorbox, array, sfmath, enumerate, pgfplots, marvosym, amssymb, multicol}
+\renewcommand{\familydefault}{\sfdefault}
+\pgfplotsset{compat=newest}
+\usepgfplotslibrary{fillbetween}
+% \everymath{\displaystyle}
+\tikzset{>=stealth}
+\usepackage[top = 0.25in, bottom = 0.25in, left = 1.25in, right = 1.25in]{geometry}
+\pagestyle{empty}
+\raggedright
+
+\tikzset{>=stealth}
+\tikzstyle{input} = [circle, text centered, radius = 1cm, draw = black]
+\tikzstyle{function} = [rectangle, text centered, minimum width = 2cm, minimum height = 1cm, draw = black]
+
+\newcounter{example}[section]
+\newenvironment{example}[1][]{\refstepcounter{example}\par\medskip
+   {\color{red}\textbf{Example~\theexample. #1}}}{\medskip}
+
+\begin{document}
+
+\section*{Rational, Radical, and Power Functions}
+
+\begin{tcolorbox}[colframe=orange!70!white, coltitle=black, title=\textbf{Summary}]
+\begin{enumerate}
+    \item The denominator of a rational function can never equal 0.
+    \item Each $x$-value that causes this is either a vertical asymptote or a hole in the graph.
+    \item You can't take even roots of negative numbers.
+\end{enumerate}
+\end{tcolorbox}
+\vspace{1in}
+
+\subsection*{Rational Functions}
+
+Rational functions have the form $y = \frac{f(x)}{g(x)}$ where $g(x) \neq 0$.
+\vspace{0.5in}
+
+\begin{example}
+Given the rational function $f(x) = \frac{2x}{x-3}$
+\begin{enumerate}[(a)]
+    \item Determine the domain. \vfill 
+    \item Complete the tables below and describe what happens as $x$ approaches 3.    \newline\\
+    
+    \begin{minipage}{0.35\textwidth}
+    \begin{tabular}{c|c}    \setlength{\extrarowheight}{6pt}
+    $\pmb{x}$ & $\pmb{f(x)}$ \\ \hline 
+    2 & \\[6pt] \hline
+    2.9 & \\[6pt]   \hline
+    2.99 & \\[6pt]  \hline
+    2.999 & \\[6pt] \hline
+    2.9999 & \\[6pt]
+    \end{tabular}
+    \end{minipage}
+    \begin{minipage}{0.25\textwidth}
+    \begin{tabular}{c|c}    \setlength{\extrarowheight}{6pt}
+    $\pmb{x}$ & $\pmb{f(x)}$ \\ \hline 
+    4 & \\[6pt] \hline
+    3.1 & \\[6pt]   \hline
+    3.01 & \\[6pt]  \hline
+    3.001 & \\[6pt] \hline
+    3.0001 & \\[6pt]
+    \end{tabular}
+    \end{minipage}
+\end{enumerate}
+\end{example}
+
+\vfill 
+\newpage 
+
+Notice how the output values get out of control: 
+\[
+f(x) \to -\infty \quad \text{or} \quad f(x) \to \infty
+\]
+
+Since $x$ can't equal 3, the graph of $\frac{2x}{x-3}$ will never cross the vertical line $x = 3$. \newline\\
+
+This line is called a {\color{blue}\textbf{vertical asymptote}}. 
+\vspace{1in}
+
+At each of the values that cause the denominator to = 0, \\ there will be \textbf{only one of two things there}: 
+\begin{itemize}
+    \item A vertical asymptote
+    \item Or a hole in the graph
+\end{itemize}
+
+\vspace{1in}
+
+\textsc{How to Tell Your Asymptote From a Hole In the Graph:}
+    \begin{enumerate}
+        \item {\color{red}\textbf{Factor}} both numerator and denominator {\color{red}\textbf{**completely**}} and then {\color{blue}\textbf{simplify that}}. 
+        \item For {\color{violet}\textbf{each domain issue}} in the \underline{denominator}, evaluate the \textbf{simplified function} at those $x$-values:
+        \begin{itemize}
+            \item If you still get a 0 in the denominator (typically an error message) you have a \textbf{vertical asymptote}.  
+            \item Otherwise, there is a hole in the graph there ($y$-coordinate is that output value)    
+        \end{itemize}
+    \end{enumerate}
+    
+\vspace{1in}
+
+\begin{example}
+Determine the equations for any vertical asymptote(s) and/or exact coordinates of any holes in the graph.
+\begin{multicols}{2}
+\begin{enumerate}[(a)]
+    \item $\frac{x^2-4}{x^2-x-2}$
+    \item $\frac{x+5}{x^2+8x+15}$
+\end{enumerate}
+\end{multicols}
+\end{example}
+
+\vfill 
+\newpage 
+
+\subsection*{Radical Functions}
+
+\begin{itemize}
+    \item \emph{Can't} take square roots (or even roots in general) of negative numbers: $\sqrt{\geq 0}$
+    \item \emph{Can} take cube roots (or odd roots in general) of any number.
+\end{itemize}
+\vspace{1in}
+
+\begin{example}
+A sapling of a type of tree grows according to the equation
+\[
+g(x) = 10\sqrt{x} + 0.75
+\]
+where $x$ is the number of years since planting and $g(x)$ is the height of the tree.
+\begin{enumerate}[(a)]
+    \item How tall will it be on its 20th birthday? \vspace{2in}
+    \item How long will it take to be 30 feet tall?
+\end{enumerate}
+\end{example}
+\vfill 
+\newpage 
+
+\subsection*{Power Functions}
+
+\begin{itemize}
+    \item Has form $f(x) = a \cdot x^b$
+    \item If $a$ is positive:
+    \begin{itemize}
+        \item Opens downward if $0 < b < 1$
+        \item Opens upward if $b > 1$
+    \end{itemize}
+\end{itemize}
+
+\vspace{1.5in}
+
+\begin{example}
+The amount of money spent (in billions) on R\&D each year is given by 
+\[
+f(x) = 19.66x^{0.74} \quad 5 \leq x \leq 21
+\]
+where $x$ is the number of years since 2000.
+\begin{enumerate}[(a)]
+    \item Evaluate and interpret $f(12)$ \vspace{2in}
+    \item Find the average rate of change for the amount spent between 2008 and 2012.
+\end{enumerate}
+\end{example}
+
+\end{document}

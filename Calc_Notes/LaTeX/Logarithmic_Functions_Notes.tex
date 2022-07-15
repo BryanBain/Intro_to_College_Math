@@ -1,0 +1,246 @@
+\documentclass{article}
+
+\usepackage{amsmath, enumerate, xcolor, tikz, pgfplots, array, bm, sfmath, tcolorbox, multicol}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[top=0.5in, bottom=0.5in, left=1.25in, right=1.25in]{geometry}
+\pagestyle{empty}
+\raggedright
+
+\pgfplotsset{compat = newest}
+\usetikzlibrary{arrows.meta, calc, decorations.pathreplacing}
+\pgfplotsset{every axis/.append style = {axis lines = middle}}
+\pgfplotsset{every tick label/.append style={font=\scriptsize}}
+\everymath{\displaystyle}
+
+\newcounter{example}[section]
+\newenvironment{example}[1][]{\refstepcounter{example}\par\medskip
+   {\color{red}\textbf{Example~\theexample. #1}}}{\medskip}
+
+\begin{document}
+
+\section*{Logarithmic Functions}
+
+\begin{tcolorbox}[colframe=orange!70!white, coltitle=black, title=\textbf{Summary}]
+\begin{enumerate}
+    \item The inverse of the exponential function $y = b^x$ is $y = \log_b(x)$ with $b > 0$ and $b \neq 1$
+    \item $\log_{10}(x) = \log (x)$ and $\log_e (x) = \ln x$
+    \item The domain of the logarithmic function is $(0, \infty)$
+\end{enumerate}
+\end{tcolorbox}
+
+\vfill
+
+Recall that an {\color{violet}\textbf{inverse function}} allows you to get your input back from your output of a function. \\[0.5in]
+
+The \textbf{inverse} of the exponential function $f(x) = b^x$  is the {\color{blue}\textbf{logarithmic function}}. \newline\\ 
+
+It is denoted $f^{-1}(x) = \log_b x$
+
+\begin{align*}
+    \log_b(y) &= x \\[24pt]
+    b^x &= y
+\end{align*}
+
+\vfill
+
+\begin{tcolorbox}[colframe=green!60!black, title=\textbf{Common Logarithm}]
+The \textbf{common logarithm} of a real number $x$ is $\log_{10}x$ and is usually written \[\log x\]
+\end{tcolorbox}
+
+\vfill
+
+\begin{tcolorbox}[colframe=green!60!black, title=\textbf{Natural Logarithm}]
+The \textbf{natural logarithm} of a real number $x$ is $\log_e x$ and is usually written \[\ln x\]
+\end{tcolorbox}
+
+\vfill
+
+\newpage
+
+\begin{example}
+Re-write each as a  logarithmic expression.
+\begin{multicols}{3}
+\begin{enumerate}[(a)]
+    \item $2^5 = 32$    
+    \item $3^4 = 81$    
+    \item $\left(\frac{1}{4}\right)^2 = \frac{1}{16}$  
+\end{enumerate}
+\end{multicols}
+\vspace{1.5in}
+\begin{multicols}{2}
+\begin{enumerate}[(a)]  \setcounter{enumi}{3}
+    \item $7^{-2} = \frac{1}{49}$   
+    \item $e^x = 5$ 
+\end{enumerate}
+\end{multicols}
+\end{example}
+\vspace{1.25in}
+
+\subsection*{Properties of Logarithms}
+
+Exponents and logarithms have similar properties where $x > 0$ and $y > 0$  \newline\\  
+\begin{center}
+\setlength{\extrarowheight}{7pt}
+\begin{tabular}{c|c|c}
+    \textbf{Property}   &   \textbf{Exponents}                  &   \textbf{Logarithms} \\ \hline
+    Product             &   $b^x \cdot b^y = b^{x+y}$           &   $\log_b (xy) = \log_b (x) + \log_b (y)$ \\[0.5cm]
+    Quotient            &   $\frac{b^x}{b^y} = b^{x-y}$         & $\log_b\left(\frac{x}{y}\right) = \log_b (x) - \log_b(y)$ \\[0.5cm]
+    Power               & $\left(b^x\right)^y = b^{xy}$         & $\log_b(x)^y = y\cdot \log_b(x)$ \\[0.5cm]
+    \hline
+    Equality            &   $b^x = b^y \Longleftrightarrow x=y$ & $\log_b(x) = \log_b(y)\Longleftrightarrow x=y$   \\[6pt]
+    Zero Power  &   $b^0 = 1$   & $\log_b(1) = 0$   \\[0.5cm]
+    1st Power   &   $b^1 = b$   &   $\log_b(b) = 1$ \\
+\end{tabular}
+\end{center}
+\vspace{0.5in}
+
+\begin{example}
+Use the properties of logarithms to rewrite each of the following.
+\begin{multicols}{3}
+\begin{enumerate}[(a)]
+    \item $\log(6 \cdot 17)$
+    \item $\log_5\left(\frac{10}{3}\right)$
+    \item $\log_6\left(\sqrt{11}\right)$
+\end{enumerate}
+\end{multicols}
+\end{example}
+
+\newpage 
+
+\subsection*{Solving Exponential Equations}
+
+Solving an exponential equation involves 
+\begin{itemize}
+    \item Isolating the exponential base
+    \item Taking the logarithm of both sides
+\end{itemize}
+\vspace{1in}
+
+\begin{example}
+\$20,000 is deposited and compounded continuously $(A = Pe^{rt})$ at a rate of 6.5\%. 
+\begin{enumerate}[(a)]  
+    \item How many years until there is \$25,000 in the account?    \vspace{4in}
+    \item How many years until the account value doubles?
+\end{enumerate}
+\end{example}
+
+% Recall that the inverse of a function is a reflection of the graph of the function across the line $y = x$.
+% \begin{tabular}{p{0.45\textwidth}p{0.45\textwidth}}
+% \begin{tikzpicture}
+% \begin{axis}[
+% xmin = -10, xmax = 12,
+% ymin = -10, ymax = 10,
+% ticks = none, 
+% legend pos = south east,
+% legend style={draw=none}
+% ]
+% \addplot[color=blue, ultra thick, samples=200, smooth, domain=0.01:10] {ln(x)};
+% \addlegendentry{$\log_b x,\, b > 1$}
+% \addplot[color=red, thick, samples=200, smooth] {e^x};
+% \addlegendentry{$b^x, \, b > 1$}
+% \addplot[color=violet, dashed, domain=-9:9] {x};
+% \addlegendentry{$y=x$}
+% \end{axis}
+% \end{tikzpicture}
+% &
+% \begin{tikzpicture}
+% \begin{axis}[
+% xmin = -10, xmax = 12,
+% ymin = -10, ymax = 10,
+% ticks = none, 
+% legend pos = south east,
+% legend style={draw=none}
+% ]
+% \addplot[color=blue, ultra thick, samples=200, smooth, domain=0.01:10] {ln(x)/ln(0.5)};
+% \addlegendentry{$\log_b x,\, 0< b < 1$}
+% \addplot[color=red, thick, samples=200, smooth] {0.5^x};
+% \addlegendentry{$b^x, \, 0 < b < 1$}
+% \addplot[color=violet, dashed, domain=-9:9] {x};
+% \addlegendentry{$y=x$}
+% \end{axis}
+% \end{tikzpicture}
+% \end{tabular}
+
+
+
+% \newpage
+
+% \subsection*{Properties of All Logarithmic Functions}
+% \begin{itemize}
+%     \item The domain of $\log_b x$ is $(0, \infty)$ and the range is $(-\infty, \infty)$    
+%     \item $(1,0)$ is on the graph of $\log_b x$ and $x=0$ is a vertical asymptote.  
+%     \item $\log_b x$ is one-to-one (has an inverse, passes HLT), continuous, and smooth.
+%     \item $b^a = c$ if and only if $\log_b c = a$.   
+%         \begin{itemize}
+%             \item In other words, $\log_b c$ is the \textbf{exponent} you put on $b$ to get $c$. 
+%         \end{itemize}
+%     \item  $\log_b b^x = x$ for all $x$ and $b^{\log_b x} = x$ for all $x >0$
+% \end{itemize}
+
+% \vfill
+
+% \subsection*{$\mathbf{f(x) = \log_b(x)}$ when $\mathbf{b > 1}$}  
+% \begin{itemize}
+%     \item  $f$ is always increasing.  
+%     \item  $\lim_{x \to 0^+} f(x) = -\infty$ and $\lim_{x \to \infty} f(x) = \infty$  
+% \end{itemize}
+
+% \vfill
+% \subsection*{$\mathbf{f(x) = \log_b(x) \text{ when } 0 < b < 1}$}
+% \begin{itemize}
+%     \item $f$ is always decreasing.
+%     \item $\lim_{x \to 0^+} f(x) = \infty$ and $\lim_{x \to \infty} f(x) = -\infty$ 
+% \end{itemize}
+
+% \vfill
+
+% \newpage
+
+% \begin{example} 
+% Simplify each of the following.
+% \begin{enumerate}[(a)]
+% \item $\log_3 81$   \vfill
+% \item $\log_2 \left(\frac{1}{8}\right)$ \vfill
+% \item $\log_{\sqrt{5}} 25$  \vfill
+% \end{enumerate}
+
+% \newpage
+
+% \begin{enumerate}[(a)] \setcounter{enumi}{3}
+% \item $\ln \left(\sqrt[3]{e^2}\right)$      \vfill
+% \item $\log 0.001$      \vfill
+% \item $2^{\log_2 8}$    \vfill
+% \item $117^{-\log_{117} 6}$ \vfill
+% \end{enumerate}
+% \end{example}
+
+% \newpage
+
+% \subsection*{Domain of Logarithmic Functions}
+
+% Up until now, the only domain restrictions we have had have been   
+% \begin{itemize}
+%     \item  Denominator can't = 0
+%     \item  Can't take even root of a negative number
+% \end{itemize}
+% \vspace{0.5in}
+
+% For logarithms: 
+
+% \[\log_b \, (\color{blue}\textbf{positive value}) \]
+% \vspace{1.5in}
+
+% \begin{example} 
+% Find the domain of each. Write your answer in interval notation.    
+% \begin{enumerate}[(a)]
+% \item $f(x) = 2\log(3-x) - 1$   \vfill
+% \end{enumerate}
+
+% \newpage
+
+% \begin{enumerate}[(a)] \setcounter{enumi}{1}
+% \item $g(x) = -\tfrac{2}{3}\log_8\left(x^2 + 6x - 7\right)$   \vfill
+% \item $h(x) = \ln\left(\frac{x}{x-1}\right)$    \vfill 
+% \end{enumerate}
+% \end{example}
+\end{document}
