@@ -1,0 +1,103 @@
+\documentclass{article}
+\usepackage{amsmath, sfmath, multicol}
+\renewcommand{\familydefault}{\sfdefault}
+\raggedright
+\pagestyle{empty}
+\usepackage[margin = 0.5in]{geometry}
+
+\newcounter{pset}
+
+\begin{document}
+
+\subsection*{Exponential Functions P-Set} 
+
+Given $f(x) = 6(1.2)^x$, evaluate each. Round to 3 decimal places.
+\begin{multicols}{3}
+\begin{enumerate}
+    \item $f(2)$
+    \item $f(-1.1)$
+    \item $f(5.8)$
+\end{enumerate}     \setcounter{pset}{\value{enumi}}
+\end{multicols}
+
+The healing of a 200-square-centimeter wound depends on the amount of time since the wound occurred and can be modeled by
+\[
+f(x) = 200\left(\frac{4}{5}\right)^x \quad x \geq 0
+\]
+where $x$ represents the number of days since the wound occurred and $f(x)$ represents the size of the wound in square centimeters.
+\begin{enumerate}   \setcounter{enumi}{\value{pset}}
+    \item Evaluate and interpret $f(7)$
+    \item How many days will it take for the wound to be half its original size?
+    \item Find and interpret the average rate of change of the function in the interval [1, 7].
+\end{enumerate} \setcounter{pset}{\value{enumi}}
+
+The annual total assets in mutual funds in the US can be modeled by 
+\[
+f(x) = 126.67(1.217)^x  \quad [1, 16]
+\]
+where $x$ represents the number of years since 1999 and $f(x)$ represents the annual total assets in mutual funds  (in billions of dollars).
+\begin{enumerate}   \setcounter{enumi}{\value{pset}}
+    \item Evaluate and interpret $f(9)$
+    \item Find and interpret the average rate of change of the function in the interval [5, 15].
+\end{enumerate} \setcounter{pset}{\value{enumi}}
+
+Use the simple interest formula $I = prt$, to find the total interest earned in an account given each of the following.
+\begin{multicols}{2}
+\begin{enumerate}   \setcounter{enumi}{\value{pset}}
+    \item Deposit \$3000 at 6\% interest for 5 years
+    \item Deposit \$500 at 4.5\% interest for 2 years
+\end{enumerate} \setcounter{pset}{\value{enumi}}
+\end{multicols}
+
+If Mrs. Johanson deposits \$5000 into an account that yields 6.5\% annual interest, how much will be in the account after 10 years if the interest is compounded
+\begin{multicols}{3}
+\begin{enumerate}   \setcounter{enumi}{\value{pset}}
+    \item Annually
+    \item Monthly 
+    \item Continuously
+\end{enumerate} \setcounter{pset}{\value{enumi}}
+\end{multicols}
+
+Under certain conditions, the spread of E. Coli can be modeled by
+\[
+f(t) = 1,200,000e^{0.23t}
+\]
+where $t$ represents time in minutes and $f(t)$ represents the size of the bacteria colony.
+\begin{enumerate}   \setcounter{enumi}{\value{pset}}
+    \item Evaluate and interpret $f(0)$
+    \item Evaluate and interpret $f(5)$
+    \item Find and interpret the average rate of change in the interval [0,10].
+\end{enumerate} \setcounter{pset}{\value{enumi}}
+
+\newpage
+
+\texttt{Key} \newline 
+
+\begin{enumerate}
+    \item 8.64
+    \item 4.910
+    \item 17.274
+    
+    \item $f(7) \approx 41.94$; after 7 days, the wound will be about 41.94 square cm.
+    \item After about 3.11 days
+    \item About $-19.68$; on average, the wound decreased by about 19.68 square cm each day between days 1 and 7.
+    
+    \item $f(9) \approx 741.80$; in 2008, the annual total assets in mutual funds was about \$741.80 billion dollars.
+    \item About 207.19; on average, the total assets increased by about \$207.19 billion each year between 2004 and 2014.
+    
+    \item \$900
+    \item \$45
+    
+    \item \$9,385.69
+    \item \$9,560.92
+    \item \$9,577.70
+    
+    \item $f(0) = 1,200,000$; initially, there are 1,200,000 bacteria present
+    \item $f(5) \approx 3,789,831.5$; after 5 minutes, there are about 3.79 million bacteria
+    \item About 1,076,901.9; in the first 10 minutes, the bacteria count grows by about 1,076,902 per minute.
+\end{enumerate}
+
+
+
+
+\end{document}

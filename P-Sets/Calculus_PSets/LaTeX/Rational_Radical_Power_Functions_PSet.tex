@@ -1,0 +1,102 @@
+\documentclass{article}
+\usepackage{amsmath, enumerate, pgfplots, multicol, sfmath}
+\pgfplotsset{compat = newest}
+\usepackage[margin=0.5in]{geometry}
+\renewcommand{\familydefault}{\sfdefault}
+\raggedright
+\pagestyle{empty}
+
+\newcounter{pset}
+\newcounter{key}
+
+\title{Rational, Radical, and Power Functions P-Set}
+\author{Bryan Bain}
+\date{June 2022}
+
+\begin{document}
+
+\subsubsection*{Rational, Radical, and Power Functions P-Set}
+
+Given each rational function
+\begin{itemize}
+    \item Determine the domain
+    \item Use a table of values to describe what happens as $x$ approaches each restricted value listed above.
+\end{itemize}
+\begin{multicols}{3}
+\begin{enumerate}
+    \item $f(x) = \frac{3x-12}{x-2}$
+    \item $f(x) = \frac{x^2-1}{x+1}$
+    \item $f(x) = \frac{x^2+2x+1}{x^2+4x+3}$
+\end{enumerate} \setcounter{pset}{\value{enumi}}
+\end{multicols}
+
+Determine the equations for any vertical asymptote(s) and/or exact coordinates of any holes in the graph.
+\begin{multicols}{3}
+\begin{enumerate}   \setcounter{enumi}{\value{pset}}
+    \item $f(x) = \frac{2x-16}{x-5}$
+    \item $g(x) = \frac{12x^3}{3x}$
+    \item $h(x) = \frac{4x^2+8x+3}{2x^2-x-6}$
+\end{enumerate}     \setcounter{pset}{\value{enumi}}
+\end{multicols}
+
+
+A slightly banked highway corner will safely accommodate traffic at a speed given by the model
+    \[
+    f(x) = \tfrac{29}{20}\sqrt{x}
+    \]
+where $x$ represents the radius of the corner in feet and $f(x)$ represents the speed at which traffic can safely travel in mph.
+\begin{enumerate}   \setcounter{enumi}{\value{pset}}
+    \item Evaluate and interpret $f(300)$.
+    \item If the highway planners expect the traffic to travel at a speed of 45 mph, what radius should the corner be?
+\end{enumerate} \setcounter{pset}{\value{enumi}}
+
+In a forest fire tower, the distance that an observer is able to see into the forest is related to the height of the fire tower via the function
+\[
+g(x) = \tfrac{7}{5}\sqrt{x}
+\]
+where $x$ represents the height of the tower in feet and $g(x)$ represents the distance that the observer can see in miles.
+\begin{enumerate}   \setcounter{enumi}{\value{pset}}
+    \item Evaluate and interpret $g(70)$.
+    \item If the observer is required to see 20 miles into the forest, how high must the tower be?
+\end{enumerate} \setcounter{pset}{\value{enumi}}
+
+The number of retired workers in the US receiving Social Security benefits can be modeled by 
+\[
+f(x) = 19.14x^{0.112} \quad 1 \leq x \leq 20
+\]
+where $x$ represents the number of years since 1979 and $f(x)$ represents the number of retired workers in millions receiving Social Security benefits.
+\begin{enumerate}   \setcounter{enumi}{\value{pset}}
+    \item Evaluate and interpret $f(19)$
+    \item Find the average rate of change between 1995 and 1996.
+\end{enumerate} \setcounter{pset}{\value{enumi}}
+
+
+
+
+
+\newpage 
+
+\texttt{Key:}
+
+\begin{enumerate}
+    \item $x \neq 2: \quad (-\infty, 2) \cup (2, \infty)$; as $x \to 2$, $f(x) \to \infty \text{ and } f(x) \to -\infty$
+    \item $x \neq -1: \quad (-\infty, -1) \cup (-1, \infty)$; as $x \to -1, f(x) \to -2$
+    \item $x \neq -3, -1: \quad (-\infty, -3) \cup (-3,-1) \cup (-1, \infty)$
+    \begin{itemize}
+        \item As $x \to -3$: $f(x) \to -\infty \text{ and } f(x) \to \infty$
+        \item As $x \to -1$: $f(x) \to 0$
+    \end{itemize}
+    \item V.A. $x = 5$
+    \item Hole $(0,0)$
+    \item V.A. $x = 2$; Hole $\left(-\tfrac{3}{2},\tfrac{4}{7}\right)$
+    \item $f(300) \approx 25.11$; At a radius of 300 ft, traffic can safely travel at speeds of about 25 mph.
+    \item About 963.14 ft.
+    \item $g(70) \approx 11.71$; A 70 ft tower will allow about 11.71 miles of visibility.
+    \item About 204.08 ft.
+    \item $f(19) \approx 26.62$; in 1998, about 26.62 million retired workers received Social Security benefits.
+    \item About 17.79 million retired workers.
+\end{enumerate}
+
+
+
+\end{document}

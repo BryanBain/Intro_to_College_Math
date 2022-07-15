@@ -1,0 +1,92 @@
+\documentclass{article}
+\usepackage{amsmath, sfmath, multicol}
+\renewcommand{\familydefault}{\sfdefault}
+\raggedright
+\pagestyle{empty}
+\usepackage[margin = 0.5in]{geometry}
+
+\newcounter{pset}
+\newcounter{key}
+
+\begin{document}
+
+\subsection*{Logarithmic Functions P-Set} 
+
+Re-write each as a logarithmic expression.
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $2^5 = 32$
+    \item $3^{-4} = \frac{1}{81}$
+    \item $81^{3/4} = 27$
+    \item $e^0 = 1$
+\end{enumerate}     \setcounter{pset}{\value{enumi}}
+\end{multicols}
+
+Use the properties of logarithms to rewrite each of the following.
+\begin{multicols}{3}
+\begin{enumerate}   \setcounter{enumi}{\value{pset}}
+    \item $\log_2\left(\frac{3}{5}\right)$
+    \item $\log(8 \cdot 20)$
+    \item $\ln\left(\sqrt{26}\right)$
+\end{enumerate}     \setcounter{pset}{\value{enumi}}
+\end{multicols}
+\begin{multicols}{3}
+\begin{enumerate}   \setcounter{enumi}{\value{pset}}
+    \item $\log_6\left(\frac{4}{7}\right)$
+    \item $\log(17 \cdot 11)$
+    \item $\ln\left(\sqrt[3]{11}\right)$
+\end{enumerate}     \setcounter{pset}{\value{enumi}}
+\end{multicols}
+
+The number of bacteria in a petri dish can be modeled by the formula $A = A_0e^{kt}$, where
+\begin{itemize}
+    \item $A$ is the number of bacteria present at any moment in time
+    \item $A_0$ is the number of bacteria at the start ($t=0$)
+    \item $k$ is a constant
+    \item $t$ is the time (in minutes)
+\end{itemize}
+
+\begin{enumerate}   \setcounter{enumi}{\value{pset}}
+    \item Suppose there are 10,000 bacteria initially present and after 3 minutes, the bacteria count is now 25,000. Find the value of $k$. Round to 3 decimal places.
+    \item Using your answer for $k$ above, how long will it take a colony of 10,000 bacteria to grow to a size of 100,000?
+    \item How long until the bacteria population reaches 1,000,000?
+\end{enumerate}     \setcounter{pset}{\value{enumi}}
+\vfill 
+
+\dotfill \newline 
+\texttt{Key} 
+
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $\log_2(32) = 5$
+    \item $\log_3\left(\frac{1}{81}\right)=-4$
+    \item $\log_{81}(27) = \frac{3}{4}$
+    \item $\ln(1) = 0$
+\end{enumerate}     \setcounter{key}{\value{enumi}}
+\end{multicols}
+\begin{multicols}{3}
+\begin{enumerate}   \setcounter{enumi}{\value{key}}
+    \item $\log_2(3) - \log_2(5)$
+    \item $\log(8) + \log(20)$
+    \item $\frac{1}{2}\ln(26)$
+\end{enumerate}     \setcounter{key}{\value{enumi}}
+\end{multicols}
+\begin{multicols}{3}
+\begin{enumerate}   \setcounter{enumi}{\value{key}}
+    \item $\log_6(4) - \log_6(7)$
+    \item $\log(17) + \log(11)$
+    \item $\frac{1}{3}\ln(11)$
+\end{enumerate}     \setcounter{key}{\value{enumi}}
+\end{multicols}
+\begin{multicols}{3}
+\begin{enumerate}   \setcounter{enumi}{\value{key}}
+    \item $k \approx 0.305$
+    \item About 7.55 minutes
+    \item About 15.10 minutes
+\end{enumerate}     \setcounter{key}{\value{enumi}}
+\end{multicols}
+
+
+
+
+\end{document}

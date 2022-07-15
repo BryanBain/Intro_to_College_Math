@@ -1,0 +1,84 @@
+\documentclass{article}
+\usepackage{amsmath, enumerate, pgfplots, multicol, sfmath}
+\pgfplotsset{compat = newest}
+\usepackage[margin=0.5in]{geometry}
+\renewcommand{\familydefault}{\sfdefault}
+\raggedright
+\pagestyle{empty}
+
+\newcounter{pset}
+\newcounter{key}
+
+\title{Average Rate of Change P-Set (ICM)}
+\author{Bryan Bain}
+\date{June 2022}
+
+\begin{document}
+
+\subsubsection*{Average Rate of Change P-Set}
+
+A small web design company has fixed weekly costs of \$1650 and variable weekly costs of \$735 per employee, 
+\begin{enumerate}
+    \item Determine the linear cost function, $C(x)$.
+    \item Find and interpret $C(5)$.
+    \item Find the marginal cost of hiring a 6\textsuperscript{th} employee.
+\end{enumerate} \setcounter{pset}{\value{enumi}}
+
+A new copier initially costs \$25,000 and depreciates at a rate of \$1,250 per year.
+\begin{enumerate}   \setcounter{enumi}{\value{pset}}
+    \item Determine an equation for the depreciation function.
+    \item In how many years will the machine be worth \$10,000?
+\end{enumerate} \setcounter{pset}{\value{enumi}}
+
+Find the average rate of change for each function over each interval.
+\begin{multicols}{3}
+\begin{enumerate}   \setcounter{enumi}{\value{pset}}
+    \item $f(x) = x^2 - x - 3; \quad [1,4]$
+    \item $g(x) = -8x + 1; \quad [2,3]$
+    \item $h(x) = 3\sqrt{x} - 5; \quad [9, 16]$
+\end{enumerate}     \setcounter{pset}{\value{enumi}}
+\end{multicols}
+
+Given $f(x) = -3x^2 + 6x + 5$, find the average rate of change over each interval.
+\begin{multicols}{4}
+\begin{enumerate}   \setcounter{enumi}{\value{pset}}
+    \item $[7,7.1]$
+    \item $[7,7.01]$
+    \item $[7,7.001]$
+    \item $[7,7.0001]$
+\end{enumerate}     \setcounter{pset}{\value{enumi}}
+\end{multicols}
+
+\begin{enumerate}   \setcounter{enumi}{\value{pset}}
+    \item What value do your outputs in the previous 4 problems get closer to?
+\end{enumerate}
+
+
+\vfill 
+
+\dotfill \newline 
+\texttt{Key:}
+
+\begin{enumerate}
+    \item $C(x) = 1650 + 735x$
+    \item $C(5) = 5325$; a staff of 5 has a weekly cost of \$5,325.
+    \item \$735 will be added to the weekly cost to hire a 6\textsuperscript{th} employee.
+    \item $f(x) = 25000 - 1250x$
+    \item 12 years
+\begin{multicols}{4}
+    \item 4
+    \item $-8$
+    \item $\frac{3}{7}$
+    \item $-36.3$
+\end{multicols}
+\begin{multicols}{4}
+    \item $-36.03$
+    \item $-36.003$
+    \item $-36.0003$
+    \item $-36$
+\end{multicols}
+\end{enumerate}
+
+
+
+\end{document}

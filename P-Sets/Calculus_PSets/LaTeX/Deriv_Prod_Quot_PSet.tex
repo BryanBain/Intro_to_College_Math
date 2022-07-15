@@ -1,0 +1,91 @@
+\documentclass{article}
+\usepackage{amsmath, sfmath, multicol}
+\renewcommand{\familydefault}{\sfdefault}
+\pagestyle{empty}
+\setlength\parindent{0pt}
+\usepackage[margin = 0.5in]{geometry}
+\newcounter{pset}
+\newcounter{key}
+
+\begin{document}
+
+\subsection*{Derivatives of Products and Quotients P-Set}
+
+Use the Product Rule to determine the derivative of each.
+\begin{multicols}{3}
+\begin{enumerate}
+    \item $f(x) = x^2(2x+1)$
+    \item $f(x) = (2x-1)(x^2-2x-3)$
+    \item $y = (3x^2-2x+1)(2x^2+5x-7)$
+\end{enumerate} \setcounter{pset}{\value{enumi}}
+\end{multicols}
+\begin{multicols}{3}
+\begin{enumerate}   \setcounter{enumi}{\value{pset}}
+    \item $y = (2\sqrt{x} + 4x - 3)(3x-4)$
+    \item $g(x) = (2x^{4/3}+3x)(-2x^{7/3}+2)$
+    \item $g(x) = (x^{2/3}+x+1)(x^{-1}+x^{-2})$
+\end{enumerate} \setcounter{pset}{\value{enumi}}
+\end{multicols}
+
+The monthly sales of a new computer are given by $q(t) = 30t-0.5t^2$, where $t$ is in months and $q(t)$ is in hundred units per month after the computer hits the market.
+\begin{enumerate}   \setcounter{enumi}{\value{pset}}
+    \item Determine the revenue function $R(t)$. Do not simplify.
+    \item Compute and interpret $R'(6)$.
+\end{enumerate} \setcounter{pset}{\value{enumi}}
+\bigskip 
+
+Use the Quotient Rule to determine the derivative of each.
+\begin{multicols}{3}
+\begin{enumerate}   \setcounter{enumi}{\value{pset}}
+    \item $f(x) = \frac{3x-4}{x-1}$
+    \item $y = \frac{3x^2-5x+1}{5x^2+3x+2}$
+    \item $g(x) = \frac{4\sqrt{x}+3}{2x+7}$
+\end{enumerate} \setcounter{pset}{\value{enumi}}
+\end{multicols}
+
+A local game commission decides to stock a lake with bass. To do this, 100 bass are introduced into the lake. The population of the bass is approximated by
+\[
+P(t) = \frac{100+70t}{1+0.02t} \quad t \geq 0
+\]
+where $t$ is time in months.
+\begin{enumerate}   \setcounter{enumi}{\value{pset}}
+    \item Compute and interpret $P(5)$.
+    \item Compute and interpret $P'(5)$.
+\end{enumerate} 
+
+
+
+
+\vfill
+
+\dotfill \newline
+
+\texttt{Key}
+\begin{multicols}{3}
+\begin{enumerate}
+    \item $6x^2 + 2x$
+    \item $6x^2 - 10x - 4$
+    \item $24x^3 + 33x^2 - 58x + 19$
+\end{enumerate} \setcounter{key}{\value{enumi}}
+\end{multicols}
+\begin{enumerate}   \setcounter{enumi}{\value{key}}
+    \item $(x^{-1/2}+4)(3x-4)+3(2\sqrt{x}+4x-3)$
+    \item $\left(\frac{8}{3}x+3\right)\left(-2x^{7/3}+2\right)-\frac{14}{3}x^{4/3}\left(2x^{4/3}+3x\right)$
+    \item $\left(\frac{2}{3}x^{-1/3}+1\right)\left(x^{-1}+x^{-2}\right)+\left(-x^{-2}-2x^{-3}\right)\left(x^{2/3}+x+1\right)$
+    \item $R(t) = t(30t-0.5t^2)$
+    \item $R'(6) = 306$; after 6 months, the revenue is changing by 306 hundreds of units per month.
+\end{enumerate} \setcounter{key}{\value{enumi}}
+\begin{multicols}{3}
+\begin{enumerate}   \setcounter{enumi}{\value{key}}
+    \item $\frac{1}{(x-1)^2}$
+    \item $\frac{34x^2+2x-13}{(5x^2+3x+2)^2}$
+    \item $\frac{2x^{-1/2}(2x+7)-2(4\sqrt{x}+3)}{(2x+7)^2}$
+\end{enumerate} \setcounter{key}{\value{enumi}}
+\end{multicols}
+\begin{enumerate}   \setcounter{enumi}{\value{key}}
+    \item $P(5) \approx 409.1$; after 5 months, the bass population is about 409.
+    \item $P'(5) \approx 56.2$; after 5 months, the rate of change in the bass population is about 56 bass/month.
+\end{enumerate} \setcounter{key}{\value{enumi}}
+
+
+\end{document}

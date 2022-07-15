@@ -1,0 +1,76 @@
+\documentclass{article}
+\usepackage{amsmath, sfmath, multicol}
+\renewcommand{\familydefault}{\sfdefault}
+\pagestyle{empty}
+\setlength\parindent{0pt}
+\usepackage[margin = 0.5in]{geometry}
+\newcounter{pset}
+\newcounter{key}
+
+\begin{document}
+
+\subsection*{Derivatives of Constants, Powers, and Sums P-Set}
+
+Find the derivative of each.
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $f(x) = 3$
+    \item $f(x) = x^6$
+    \item $f(x) = -5x^7$
+    \item $f(x) = 2x^{2/3}$
+\end{enumerate}     \setcounter{pset}{\value{enumi}}
+\end{multicols}
+\begin{multicols}{3}
+\begin{enumerate}   \setcounter{enumi}{\value{pset}}
+    \item $f(x) = 2x^3 + 4x^2 - 7x + 1$
+    \item $g(x) = -5x^2 - 6x + 2$
+    \item $h(x) = 3\sqrt{x} + \frac{1}{2}x - x^{7/3}$
+\end{enumerate}     \setcounter{pset}{\value{enumi}}
+\end{multicols}
+
+The size of a certain bacteria culture at time $t$, in minutes, is appoximated by $N(t) = 6t^{5/2}$, where $N(t)$ is in milligrams.
+\begin{enumerate}   \setcounter{enumi}{\value{pset}}
+    \item Compute and interpret the average rate of change from $t=1$ to $t=4$.
+    \item Compute and interpret $N'(4)$
+\end{enumerate}     \setcounter{pset}{\value{enumi}}
+
+An egg is dropped from a building 150 ft tall. Its height above the ground after $t$ seconds is given by $s(t) = 150 - 16t^2$, where $s(t)$ is measured in feet.
+\begin{enumerate}   \setcounter{enumi}{\value{pset}}
+    \item Find the a function for the velocity of the egg, using $v(t) = s'(t)$.
+    \item Determine and interpret $s(1)$.
+    \item Determine and interpret $v(1)$.
+    \item How many seconds (to 1 decimal place) until the egg hits the ground?
+\end{enumerate}     \setcounter{pset}{\value{enumi}}
+
+\vfill
+
+\dotfill \newline
+
+\texttt{Key}
+
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 0
+    \item $6x^5$
+    \item $-35x^6$
+    \item $\frac{4}{3}x^{-1/3}$
+\end{enumerate}     \setcounter{key}{\value{enumi}}
+\end{multicols}
+\begin{multicols}{3}
+\begin{enumerate}   \setcounter{enumi}{\value{key}}
+    \item $6x^2 + 4x - 7$
+    \item $-10x - 6$
+    \item $\frac{3}{2}x^{-1/2} + \frac{1}{2} - \frac{2}{3}x^{4/3}$
+\end{enumerate}     \setcounter{key}{\value{enumi}}
+\end{multicols}
+\begin{enumerate}   \setcounter{enumi}{\value{key}}
+    \item 62; The culture size grew, on average, by 62 bacteria each minute between 1 and 4 minute.
+    \item $N'(4) = 120$; After 4 minutes, the culture size is growing at a rate of 120 mg/min.
+    \item $v(t) = -32t$
+    \item 132; After 1 second, the egg is 132 feet from the ground.
+    \item $-32$; After 1 second, the speed of the egg is 32 ft/s.
+    \item About 3.1 seconds
+\end{enumerate}     \setcounter{key}{\value{enumi}}
+
+
+\end{document}

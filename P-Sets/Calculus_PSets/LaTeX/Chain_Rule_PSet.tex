@@ -1,0 +1,76 @@
+\documentclass{article}
+\usepackage{amsmath, sfmath, multicol}
+\renewcommand{\familydefault}{\sfdefault}
+\pagestyle{empty}
+\setlength\parindent{0pt}
+\usepackage[margin = 0.5in]{geometry}
+\newcounter{pset}
+\newcounter{key}
+
+\begin{document}
+
+\subsection*{The Chain Rule P-Set}
+
+Find the derivative of each.
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $f(x) = (x+3)^4$
+    \item $f(x) = (5-x)^3$
+    \item $g(x) = (2x+4)^3$
+    \item $y = (10-5x)^4$
+\end{enumerate}     \setcounter{pset}{\value{enumi}}
+\end{multicols}
+\begin{multicols}{4}
+\begin{enumerate}   \setcounter{enumi}{\value{pset}}
+    \item $f(x) = (8x^2-2x+5)^{94}$
+    \item $f(x) = \sqrt{3x+6}$
+    \item $y = \sqrt[3]{4x-3}$
+    \item $g(x) = \frac{2}{(x-7)^6}$
+\end{enumerate}     \setcounter{pset}{\value{enumi}}
+\end{multicols}
+
+\begin{enumerate}   \setcounter{enumi}{\value{pset}}
+    \item An actuary has determined that for a certain demographic group the number of people surviving over the duration of a century can be modeled by
+    \[
+    f(x) = 400\sqrt{100-x}  \quad 0 \leq x \leq 100
+    \]
+    where $x$ represents the age of the person in years in the group and $f(x)$ represents the number of people surviving. Evaluate and interpret $f'(70)$.
+\end{enumerate}     \setcounter{pset}{\value{enumi}}
+
+An anti-theft device company determines the cost to produce car antitheft devices is modeled by
+\[
+C(x) = (3x+6)^{1.5} + 30 \quad [0,50]
+\]
+where $x$ represents the number of antitheft devices produced in hundreds and $C(x)$ represents the production costs in thousands of dollars.
+\begin{enumerate}   \setcounter{enumi}{\value{pset}}
+    \item Determine the marginal cost function, $C'(x)$.
+    \item Evaluate and interpret $C'(5)$.
+\end{enumerate}     \setcounter{pset}{\value{enumi}}
+
+
+\vfill
+
+\dotfill \newline
+
+\texttt{Key}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $4(x+3)^3$
+    \item $-3(5-x)^2$
+    \item $6(2x+4)^2$
+    \item $-20(10-5x)^3$
+\end{enumerate} \setcounter{key}{\value{enumi}}
+\end{multicols}
+\begin{enumerate}   \setcounter{enumi}{\value{key}}
+    \item $94(8x^2-2x+5)^{93}(16x-2)$
+    \item $\frac{3}{2}\left(3x+6\right)^{-1/2}$
+    \item $\frac{4}{3}\left(4x-3\right)^{-2/3}$
+    \item $-12(x-7)^{-7}$
+    \item $f'(70) \approx -36.5$; the number of people expected to live to 70 years old is decreasing by about 36.5 people/(years of age)
+    \item $C'(x) = 4.5(3x+6)^{0.5}$
+    \item $C'(5) \approx 20.6$; when 500 devices are produced, the costs of producing the next 100 is about \$20.6 thousand.
+\end{enumerate} \setcounter{key}{\value{enumi}}
+
+
+
+\end{document}

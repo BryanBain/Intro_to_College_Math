@@ -1,0 +1,76 @@
+\documentclass{article}
+\usepackage{amsmath, sfmath, multicol}
+\renewcommand{\familydefault}{\sfdefault}
+\pagestyle{empty}
+\setlength\parindent{0pt}
+\usepackage[margin = 0.5in]{geometry}
+\newcounter{pset}
+\newcounter{key}
+
+\begin{document}
+
+\subsection*{Derivatives of Logarithmic Functions P-Set}
+
+Find the derivative of each.
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $f(x) = 5\ln(x)$
+    \item $f(x) = \ln(x^6)$
+    \item $f(x) = 10 - 12\ln(x)$
+    \item $y = 4x^3 \cdot \ln(x)$
+\end{enumerate}     \setcounter{pset}{\value{enumi}}
+\end{multicols}
+
+A research assistant in biology finds in an experiment that at low temperatures the growth of a certain bacteria culture can be modeled by
+\[
+f(t) = 750 + 12\ln(t) \quad t \geq 1
+\]
+where $t$ represents the number of hours since the start of the experiment and $f(t)$ represents the number of bacteria present.
+\begin{enumerate}   \setcounter{enumi}{\value{pset}}
+    \item Evaluate and interpret $f(12)$
+    \item Determine $f'(t)$
+    \item Evaluate and interpret $f'(12)$
+\end{enumerate}     \setcounter{pset}{\value{enumi}}
+
+Find the derivative of each.
+\begin{multicols}{4}
+\begin{enumerate}   \setcounter{enumi}{\value{pset}}
+    \item $f(x) = \ln(x+7)$
+    \item $f(x) = \ln(x^2+3)$
+    \item $f(x) = \ln\left(\sqrt{2x+5}\right)$
+    \item $f(x) = \sqrt{x} \cdot \ln\left(\sqrt{x}\right)$
+\end{enumerate}     \setcounter{pset}{\value{enumi}}
+\end{multicols}
+
+
+\vfill
+
+\dotfill \newline
+
+\texttt{Key}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $\frac{5}{x}$
+    \item $\frac{6}{x}$
+    \item $-\frac{12}{x}$
+    \item $12x^2 \cdot \ln(x) + 4x^2$
+\end{enumerate}     \setcounter{key}{\value{enumi}}
+\end{multicols}
+
+\begin{enumerate}   \setcounter{enumi}{\value{key}}
+    \item $f(12) \approx 780$; 12 hours after the start, there are approximately 780 bacteria.
+    \item $\frac{12}{t}$
+    \item $f'(12) = 1$; 12 hours after the start, the bacteria are growing by 1 bacteria per hour.
+\end{enumerate}     \setcounter{key}{\value{enumi}}
+
+\begin{multicols}{4}
+\begin{enumerate}   \setcounter{enumi}{\value{key}}
+    \item $\frac{1}{x+7}$
+    \item $\frac{2x}{x^2+3}$
+    \item $\frac{1}{2x+5}$
+    \item $\frac{1}{2\sqrt{x}}\ln(\sqrt{x}) + \frac{1}{2\sqrt{x}}$
+\end{enumerate}     \setcounter{key}{\value{enumi}}
+\end{multicols}
+
+
+\end{document}

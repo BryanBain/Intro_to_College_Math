@@ -1,0 +1,98 @@
+\documentclass{article}
+\usepackage{amsmath, enumerate, pgfplots, multicol, sfmath}
+\pgfplotsset{compat = newest}
+\usepackage[margin=0.5in]{geometry}
+\renewcommand{\familydefault}{\sfdefault}
+\raggedright
+\pagestyle{empty}
+
+\newcounter{pset}
+\newcounter{key}
+
+\title{Operations and Compositions of Functions P-Set (ICM)}
+\author{Bryan Bain}
+\date{June 2022}
+
+\begin{document}
+
+\subsubsection*{Operations and Compositions of Functions P-Set}
+
+Let $f(x) = 2x^2 - 4x$ and $g(x) = 5x + 1$. Evaluate each of the following.
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $(f + g)(-3)$
+    \item $(f - g)(2)$
+    \item $(f \cdot g)(4)$
+    \item $\left(\frac{f}{g}\right)(5)$
+\end{enumerate}     \setcounter{pset}{\value{enumi}}
+\end{multicols}
+
+The price-demand function $p$ is given. Determine the revenue function $R$.
+\begin{multicols}{4}
+\begin{enumerate}     \setcounter{enumi}{\value{pset}}
+    \item $p(x) = 2.55$
+    \item $p(x) = -0.19x$
+    \item $p(x) = -0.3x+20$
+    \item $p(x) = -0.12x+30$
+\end{enumerate}     \setcounter{pset}{\value{enumi}}
+\end{multicols}
+
+The revenue and cost functions are given. 
+\begin{itemize}
+    \item Determine the profit function $P(x) = R(x) - C(x)$. 
+    \item Determine the maximum point of the profit function.
+    \item Determine the break-even points.
+\end{itemize}
+\begin{multicols}{2}
+\begin{enumerate}     \setcounter{enumi}{\value{pset}}
+    \item $R(x) = 120x-6x^2$, $C(x) = 240+2x$
+    \item $R(x) = 1200x - 37x^2$, $C(x) = 4300 + 148x$
+\end{enumerate}     \setcounter{pset}{\value{enumi}}
+\end{multicols}
+
+Given $f(x) = 3x^2 - x$ and $g(x) = 6x + 1$, evaluate each.
+\begin{multicols}{4}
+\begin{enumerate}     \setcounter{enumi}{\value{pset}}
+    \item $f(g(0))$
+    \item $g(f(0))$
+    \item $f(g(1))$
+    \item $g(f(-3))$
+\end{enumerate}     \setcounter{pset}{\value{enumi}}
+\end{multicols}
+
+Determine functions $f$ and $g$ for each composition such that $f(g(x)) = h(x)$. There is more than one correct answer.
+\begin{multicols}{4}
+\begin{enumerate}     \setcounter{enumi}{\value{pset}}
+    \item $h(x) = (x+3)^3$
+    \item $h(x) = \left(\frac{1}{x-2}\right)^2$
+    \item $h(x) = \sqrt[4]{x-2}$
+    \item $h(x) = 2 - 3\sqrt{x}$
+\end{enumerate}     \setcounter{pset}{\value{enumi}}
+\end{multicols}
+
+\newpage 
+
+\texttt{Key:}
+\begin{enumerate}
+    \item 16
+    \item $-11$
+    \item 336
+    \item $\frac{15}{13}$
+    \item $R(x) = 2.55x$
+    \item $R(x) = -0.19x^2$
+    \item $R(x) = =0.3x^2 + 20x$
+    \item $R(x) = -0.12x^2+30x$
+    \item $P(x) = -6x^2 + 118x - 240$; $(9.83, 340.17)$; $(2.304,0) \text{ and } (17.363,0)$
+    \item $P(x) = -37x^2 + 1052x - 4300$; $(14.216, 3177.73$; $(4.949,0) \text{ and } (23.484,0)$
+    \item 2
+    \item 1
+    \item 140
+    \item 181
+    \item $g(x) = x+3$, $f(x) = x^3$
+    \item $g(x) = \frac{1}{x-2}$, $f(x) = x^2$
+    \item $g(x) = x-2$, $f(x) = \sqrt[4]{x}$
+    \item $g(x) = \sqrt{x}$, $f(x) = 2-3x$
+\end{enumerate}
+
+
+\end{document}

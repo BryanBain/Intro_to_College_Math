@@ -1,0 +1,79 @@
+\documentclass{article}
+\usepackage{amsmath, sfmath, multicol}
+\renewcommand{\familydefault}{\sfdefault}
+\pagestyle{empty}
+\setlength\parindent{0pt}
+\usepackage[margin = 0.5in]{geometry}
+\newcounter{pset}
+\newcounter{key}
+
+\newcommand{\indefint}[1]{\displaystyle \int {#1} \, \mathrm{d}x}
+\newcommand{\defint}[3]{\displaystyle \int_{#1}^{#2} {#3} \, \mathrm{d}x}
+
+\begin{document}
+
+\subsection*{Fundamental Theorem of Calculus P-Set}
+
+Use the Fundamental Theorem of Calculus to find the exact value of each of the following. \emph{Note}: $\indefint{\frac{1}{x}} = \ln(x) + C$    \bigskip 
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $\defint{1}{4}{3x}$
+    \item $\defint{3}{5}{(2x-1)}$
+    \item $\defint{-2}{0}{3x^2}$
+    \item $\defint{1}{4}{8\sqrt{x}}$
+\end{enumerate}     \setcounter{pset}{\value{enumi}}
+\end{multicols}
+\smallskip 
+
+\begin{multicols}{4}
+\begin{enumerate}   \setcounter{enumi}{\value{pset}}
+    \item $\defint{1}{4}{(x^3-3x)}$
+    \item $\defint{0}{5}{(0.2x^2+1.3x+2.3)}$
+    \item $\defint{1}{8}{\frac{1}{x}}$
+    \item $\defint{4}{9}{\frac{x-3}{\sqrt{x}}}$
+\end{enumerate}     \setcounter{pset}{\value{enumi}}
+\end{multicols}
+\smallskip 
+
+For each of the following, calculate \emph{both} the exact net area \textbf{and} exact gross area.
+\begin{multicols}{4}
+\begin{enumerate}   \setcounter{enumi}{\value{pset}}
+    \item $\defint{-5}{5}{(x+2)}$
+    \item $\defint{0}{9}{(2\sqrt{x}-4)}$
+    \item $\defint{-1}{4}{(x^2-9)}$
+    \item $\defint{-1}{4}{(x^2-x-2)}$
+\end{enumerate}     \setcounter{pset}{\value{enumi}}
+\end{multicols}
+
+\vfill 
+
+\dotfill \newline 
+\texttt{Key}
+
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $\frac{45}{2}$
+    \item 14
+    \item 8
+    \item $\frac{112}{3}$
+\end{enumerate}     \setcounter{key}{\value{enumi}}
+\end{multicols}
+\begin{multicols}{4}
+\begin{enumerate}   \setcounter{enumi}{\value{key}}
+    \item $\frac{165}{4}$
+    \item $\frac{433}{12}$
+    \item $\ln(8)$
+    \item $\frac{20}{3}$
+\end{enumerate}     \setcounter{key}{\value{enumi}}
+\end{multicols}
+\begin{multicols}{4}
+\begin{enumerate}   \setcounter{enumi}{\value{key}}
+    \item Net: 20, Gross: 29
+    \item Net: 0, Gross: $\frac{32}{3}$
+    \item Net: $-\frac{70}{3}$, Gross: 30
+    \item Net: $\frac{25}{6}$, Gross: $\frac{79}{6}$
+\end{enumerate}     \setcounter{key}{\value{enumi}}
+\end{multicols}
+
+
+\end{document}
