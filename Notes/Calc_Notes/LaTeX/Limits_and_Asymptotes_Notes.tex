@@ -1,0 +1,160 @@
+\documentclass{article}
+
+\usepackage{amsmath, enumerate, xcolor, tikz, pgfplots, array, bm, sfmath, tcolorbox, multicol}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[top=0.5in, bottom=0.5in, left=1.25in, right=1.25in]{geometry}
+\pagestyle{empty}
+\raggedright
+
+\pgfplotsset{compat = newest}
+\usetikzlibrary{arrows.meta, calc, decorations.pathreplacing}
+\pgfplotsset{every axis/.append style = {axis lines = middle}}
+\pgfplotsset{every tick label/.append style={font=\scriptsize}}
+\everymath{\displaystyle}
+
+\newcounter{example}[section]
+\newenvironment{example}[1][]{\refstepcounter{example}\par\medskip
+   {\color{red}\textbf{Example~\theexample. #1}}}{\medskip}
+
+\begin{document}
+
+\section*{Limits and Asymptotes}
+
+\begin{tcolorbox}[colframe=orange!70!white, coltitle=black, title=\textbf{Summary}]
+\begin{enumerate}
+    \item Infinite limits are often described by vertical and horizontal asymptotes.
+    \item A function never crosses a vertical asymptote but its behavior is warped around it.
+    \item Horizontal asymptotes can help determine end behavior of a function.
+\end{enumerate}
+\end{tcolorbox}
+\vspace{1in}
+
+\subsection*{Infinite Limts and Asymptotes}
+
+\begin{example}
+For $f(x) = \frac{1}{x}$, estimate $\lim_{x \to 0} f(x)$
+\end{example}
+\vfill 
+
+\begin{example}
+For $g(x) = \frac{1}{x^2}$, estimate $\lim_{x \to 0}g(x)$
+\end{example}
+\vfill 
+\newpage 
+
+A vertical line is a {\color{blue}\textbf{vertical asymptote}} if \underline{any} are true:
+\begin{itemize}
+    \item If as $x \to a^-$, $\lim_{x \to a^-} = -\infty \text{ or } \infty$
+    \item If as $x \to a^+$, $\lim_{x \to a^+} = -\infty \text{ or } \infty$
+\end{itemize}
+\vspace{1.5in}
+
+\begin{example}
+If $f(x) = \frac{x-1}{x^2-1}$   \newline\\
+\begin{enumerate}[(a)]
+    \item State the domain of $f(x)$    \vspace{2in}
+    \item Determine $\lim_{x \to 1} f(x)$ \emph{algebraically}. \vspace{2in}
+    \item Determine $\lim_{x \to -1} f(x)$. \vfill \newpage 
+\end{enumerate}
+\end{example}
+
+\begin{example}
+The cost, $C(x)$, in thousands of dollars of removing $x$\% of a city's pollutants discharged into a lake is given by
+\[
+C(x) = \frac{113x}{100-x}
+\]
+\vspace{0.25in}
+\begin{enumerate}[(a)]
+    \item Determine the reasonable domain for $C$.  \vspace{1.25in}
+    \item Evaluate and interpret $C(50)$    \vspace{1.5in}
+    \item Determine and interpret $\lim_{x \to 100^-} C(x)$ \vspace{1.5in}
+\end{enumerate}
+\end{example}
+
+\subsection*{Limits at Infinity and Horizontal Asymptotes}
+
+What happens as $x \to -\infty$ or $x \to \infty$?  \newline\\
+
+\begin{example}
+Consider the doubling function $f(x) = 2^x$.
+\begin{enumerate}[(a)]
+    \item What is $\lim_{x \to \infty}$?    \vfill 
+    \item What is $\lim_{x \to -\infty}$?   \vfill \newpage 
+\end{enumerate}
+\end{example}
+
+In the previous example, the line $y = 0$ is a {\color{blue}\textbf{horizontal asymptote}} of $f(x) = 2^x$.    \\[0.75in]
+
+A {\color{blue}\textbf{horizontal asymptote}} of a function $f(x)$ is a horizontal line \\ with equation $y = L$ where $\lim_{x \to \pm \infty} f(x) = L$. \\[0.75in]
+
+Horizontal asymptotes are used to determine \emph{end behavior}.    \\[0.75in]
+
+\begin{example}
+Pharmacological studies have determined that the amount of medication present in the body is a function of the amount given and how much time has elapsed since taking the medicine. \newline\\
+
+For a certain medication, the amount present in milliliters, $A(t)$, can be approximated by the function 
+\[
+A(t) = 3e^{-0.123t}
+\]
+where $t$ is the number of hours since taking the medication.   \newline\\
+\begin{enumerate}[(a)]
+    \item Determine and interpret $A(0)$.   \vspace{2in}
+    \item Determine and interpret $\lim_{t \to \infty} A(t)$.
+\end{enumerate}
+\end{example}
+
+\newpage 
+
+\begin{example}
+Evaluate each of the following.
+\begin{multicols}{2}
+\begin{enumerate}[(a)]
+    \item $\lim_{x \to \infty} \frac{1}{x}$
+    \item $\lim_{x \to -\infty} \frac{1}{x}$
+\end{enumerate}
+\end{multicols}
+\vfill 
+\begin{multicols}{2}
+\begin{enumerate}[(a)]  \setcounter{enumi}{2}
+    \item $\lim_{x \to \infty} \frac{1}{x^{5/3}}$
+    \item $\lim_{x \to -\infty} \frac{1}{x^{5/3}}$
+\end{enumerate}
+\end{multicols}
+\vfill 
+\begin{multicols}{2}
+\begin{enumerate}[(a)]  \setcounter{enumi}{4}
+    \item $\lim_{x \to \infty} \frac{1}{x^{1/2}}$
+    \item $\lim_{x \to -\infty} \frac{1}{x^{1/2}}$
+\end{enumerate}
+\end{multicols}
+\end{example}
+\vfill 
+
+\subsubsection*{Special Limits at Infinity}
+
+\begin{itemize}
+    \item For $n > 0$, $\lim_{x \to \infty} \frac{1}{x^n} = 0$
+    \item For $n > 0$, $\lim_{x \to -\infty} \frac{1}{x^n} = 0$ **provided $x^n$ is a real number when $x < 0$**
+\end{itemize}
+\vspace{0.25in}
+
+\emph{Note}: All limit properties from the last section are true for limits at infinity.
+\vspace{0.25in}
+\newpage 
+
+\begin{example}
+For $f(x) = \frac{x^2+1}{2x^2-1}$, determine $\lim_{x \to \infty}f(x)$ and $\lim_{x \to -\infty} f(x)$.
+\end{example}
+\vfill 
+
+\begin{example}
+The total cost (in dollars) to produce $x$ units of a certain product is given by $C(x) = 22,500 + 7.35x$. The \textbf{average cost}, $AC$, is given by 
+\[
+AC(x) = \frac{C(x)}{x} = \frac{22,500 + 7.35x}{x}
+\]
+Find and interpret $\lim_{x \to \infty} AC(x)$
+\end{example}
+\vfill 
+
+
+\end{document}
