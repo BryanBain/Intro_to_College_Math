@@ -111,7 +111,11 @@ ymin = 0, ymax = 0.5, xlabel = {Dog Weights}, ylabel = {Relative Frequency}, yma
 \begin{center}
 \begin{tikzpicture}[scale=0.7]
 \begin{axis}[
-ymin = 0, ymax = 0.1, xlabel = {Dog Weights}, ylabel = {Density}, ymajorgrids, minor y tick num = 1, title=Relative Frequency Histogram of Dog Weights
+ymin = 0, ymax = 0.1, 
+xlabel = {Dog Weights}, 
+ylabel = {Density}, 
+yticklabels ={-0.02,0,0.02,0.04,0.06,0.08,0.1}, ymajorgrids, 
+title=Density Histogram of Dog Weights
 ]
 \addplot[ybar interval, fill=blue!60, mark=no] plot coordinates {(35,2/125) (40,4/125) (45,9/125) (50,8/125) (55,1/125) (60,1/125) (65,1/125)};
 \end{axis}
