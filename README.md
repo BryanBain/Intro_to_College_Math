@@ -28,7 +28,7 @@
     <li>Data Types and Sampling</li>
     <li>Qualitative Graphs</li>
     <li>Histograms</li>
-    [//]: # (<li>Other Graphs and Misleading Graphs</li>)
+    <!--- <li>Other Graphs and Misleading Graphs</li> --->
     <li>Measures of Center</li>
     <li>Measures of Spread</li>
     <li>Measures of Position</li>
