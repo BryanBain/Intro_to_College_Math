@@ -36,6 +36,8 @@
     <li>Probability: AND</li>
     <li>Probability: OR</li>
     <li>Speed Counting</li>
+    <li>Scatterplots and Correlation</li>
+    <li>Linear Regression</li>
     <li>Discrete Probability Distributions</li>
     <li>Binomial Probability Distributions</li>
     <li>Standard Normal Distribution</li>
