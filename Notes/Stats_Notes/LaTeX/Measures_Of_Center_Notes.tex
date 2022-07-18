@@ -1,0 +1,177 @@
+\documentclass{article}
+\usepackage[top=0.5in, bottom=0.5in, left=1.25in, right=1.25in]{geometry}
+
+\usepackage{amsmath, array, enumerate, tikz, bm, pgfplots, pgfplotstable, tcolorbox, graphicx, venndiagram, color, colortbl}
+\pgfplotsset{compat = newest}
+\usepgfplotslibrary{statistics}
+\renewcommand{\familydefault}{\sfdefault}
+\raggedright
+\pagestyle{empty}
+
+\newcounter{example}[section]
+\newenvironment{example}[1][]{\refstepcounter{example}\par\medskip
+   {\color{red}\textbf{Example~\theexample. #1}}}{\medskip}
+
+\begin{document}
+
+\section*{Measures of Center}
+
+\begin{tcolorbox}[colframe=orange!70!white, coltitle=black, title=\textbf{Summary}]
+\begin{enumerate}
+    \item Measures of center give us a ``starting point" for our data set.
+\end{enumerate}
+\end{tcolorbox}
+\vspace{0.75in}
+
+
+\subsection*{The Mean}
+\begin{tcolorbox}[colframe=green!20!black, colback = green!30!white,title=\textbf{Mean}]
+The \textbf{mean} of a data set is found by adding all of the data values together and then dividing by the total number of values. 
+\end{tcolorbox}
+\vspace{11pt}	
+
+When most people use the term \textit{average}, they are referring to the mean.
+
+
+\subsubsection*{Properties of the Mean}
+\begin{itemize}
+	\item Sample means drawn from the same population tend to vary less than other measures of center.	
+	\item The mean of a data set uses every value, unless the mean is a \textit{trimmed mean}.	
+	\item One extreme value (called an {\color{blue}\textbf{outlier}}) can change the value of the mean drastically.
+\end{itemize}
+\vspace{0.5in}
+
+\subsubsection*{Mean Formula}
+Sample mean: $\overline{x}$	\qquad	Population mean: $\mu$	\newline\\	
+\[ \overline{x}, \text{ or } \mu, = \frac{\sum x_i}{n} = \frac{1}{n}\sum x_i	\]
+
+\vfill 
+
+
+\subsection*{The Median}
+
+\begin{tcolorbox}[colframe=green!20!black, colback = green!30!white,title=\textbf{Median}]
+The \textbf{median} of a data set is found by first arranging the data values from least to greatest, then selecting the data value in the middle. 
+\end{tcolorbox}
+\vspace{0.5in}
+
+
+\subsubsection*{Properties of the Median}
+\begin{itemize}
+    \item Denoted by $\tilde{x}$ or \texttt{Med}.
+    \item If there are 2 data values in the middle, the median will be the mean of these two values.
+    \item Separates the top 50\% of the data from the bottom 50\%.
+    \item Typically does not change by large amounts when including extreme values (median is \textbf{resistant})
+\end{itemize}
+
+\newpage 
+
+
+\subsection*{The Mode}
+
+\begin{tcolorbox}[colframe=green!20!black, colback = green!30!white,title=\textbf{Mode}]
+The \textbf{mode} of a data set is the value(s) that occur the most.
+\end{tcolorbox}
+\vspace{0.25in}
+
+\begin{itemize}
+    \item May be one mode, no mode, or many modes (2 modes is called \textbf{bimodal}).
+    \item Only measure of center to use on qualitative data.
+\end{itemize}
+
+\vspace{0.75in}
+
+\begin{example}
+The data set below represents the number of complaints I receive each week about my teaching.
+\begin{center}
+8, 2, 3, 7, 4, 4, 1, 9, 7, 5
+\end{center}
+\vspace{8pt}
+
+Calculate the mean, median, and mode of the number of complaints.
+\end{example}
+\vfill 
+
+\begin{example}
+The next week, I received 400 complaints. Re-calculate the mean, median, and mode.
+\end{example}
+\vfill 
+
+\begin{example}
+California has a mean class size of 20.9 students per teacher and Alaska has a mean of 16.8 students per teacher. \newline\\ 
+
+Combining the two states, the mean number of students per teacher to be 18.85, $\left(\frac{20.9+16.8}{2}\right)$, but is this result correct? Why or why not?
+\end{example}
+
+\vfill
+\newpage
+
+\subsection*{Weighted Mean}
+Sometimes it is necessary to take into account how large each class of a data set is.
+\vspace{0.25in}
+
+If $w_i$ represents the {\color{blue}\textbf{weight}} of each class, then the \textbf{weighted mean} can be found via
+
+\[\frac{\sum \left(x_i \cdot w_i\right)}{\sum w_i}\]
+\vspace{0.25in}
+
+\begin{center}
+\fbox{\parbox{3.5in}{
+In other words: 
+\begin{enumerate}
+	\item Multiply each data value by its corresponding weight.	
+	\item Add those results.
+	\item Then divide that by the total of the weights.
+\end{enumerate}
+}}
+\end{center}
+\vspace{1in}
+
+\begin{example}
+You've recently completed a semester in college. Determine the semester's GPA (A = 4pts, B = 3pts, etc).	\newline\\
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\textbf{Course} 			&	\textbf{Grade}	&	\textbf{Credit Hours} 	\\	\hline
+Statistics					&	A 				&	4						\\
+Advanced Chris Farley		&	A 				&	3						\\
+\textit{Airplane!} Quotes	&	B 				&	5						\\
+Obnoxious Examples			&	C 				&	3						\\
+\end{tabular}
+\end{center}
+\end{example}
+
+\vfill 
+
+\begin{example}
+In a statistics course, tests count for 60\% of the final grade, homework for 20\% and midterm and final exams are 10\% each. Suppose you've earned an 87\% average on tests, 94\% average on homework and a 77\% average on the exams. \newline\\ 
+What is your overall percentage for the course?	
+\end{example}
+
+\vfill 
+\newpage 
+
+\subsection*{Grouped Data}
+
+\begin{itemize}
+    \item In grouped form, we don't know individual values in our data set.
+    \item Mean can just be an educated guess.
+    \item Use class midpoints and weighted mean techniques.
+\end{itemize}
+\vspace{1in}
+
+\begin{example}
+The table below gives the number of sushi rolls various tables ordered at a Japanese restaurant one day.
+\begin{center}
+\begin{tabular}{|c|c|}
+\textbf{Number of Rolls} & \textbf{Frequency} \\ \hline
+1 -- 5		&	4	\\
+6 -- 10		&	17	\\
+11 -- 15	&	12	\\
+\end{tabular}
+\end{center} 
+\vspace{15pt}
+
+Estimate the mean number of sushi rolls consumed per table.
+\end{example}
+
+\end{document}
