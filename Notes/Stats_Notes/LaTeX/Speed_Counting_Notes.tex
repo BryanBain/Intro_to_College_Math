@@ -1,0 +1,158 @@
+\documentclass{article}
+\usepackage[top=0.5in, bottom=0.5in, left=1.25in, right=1.25in]{geometry}
+
+\usepackage{amsmath, array, enumerate, sfmath, pgfplots, pgfplotstable, tcolorbox, graphicx, color, colortbl, multicol, venndiagram}
+\pgfplotsset{compat = newest}
+\usepgfplotslibrary{statistics}
+\usetikzlibrary{arrows.meta}
+\renewcommand{\familydefault}{\sfdefault}
+\raggedright
+\pagestyle{empty}
+
+\newcounter{example}[section]
+\newenvironment{example}[1][]{\refstepcounter{example}\par\medskip
+   {\color{red}\textbf{Example~\theexample. #1}}}{\medskip}
+
+\begin{document}
+
+\section*{Speed Counting}
+
+\begin{tcolorbox}[colframe=orange!70!white, coltitle=black, title=\textbf{Summary}]
+\begin{enumerate}
+    \item The concepts in this section are based on the Fundamental Counting Rule.
+    \item $n! = n(n-1)(n-2)\cdots(3)(2)(1)$ and $0!=1$.
+    \item With permutations, selection order matters; with combinations, it does not.
+\end{enumerate}
+\end{tcolorbox}
+\vspace{0.75in}
+
+\subsection*{Fundamental Counting Rule}
+
+\begin{example}
+For a special at a restaurant, you can choose between 3 appetizers, 4 entrees, and 2 desserts. If you select one item from each category (appetizer, entree, and dessert), how many different meals can you create?
+\end{example}
+
+\vspace{1.25in}
+
+\begin{itemize}
+    \item If event $A$ can occur in $a$ different ways and event $B$ can occur in $b$ different ways, then the total number of ways both events can occur is $ab$ ways.
+    \item Can be generalized to multiple events, such as those in example 1: $3 \times 4 \times 2 = 24$
+\end{itemize}
+
+\vspace{1.25in}
+
+\subsection*{Factorial Notation}
+
+\begin{example}
+A baseball lineup consists of 9 players. How many different lineups using all 9 players on a team exist?
+\end{example}
+
+\newpage 
+
+\begin{itemize}
+    \item Mathematicians created {\color{blue}\textbf{factorial notation}} to expedite the process.
+    \item $9! = 9 \times 8 \times 7 \times \cdots \times 3 \times 2 \times 1 = 362,880$
+    \item In general, for a positive integer $n$, \[n! = n(n-1)(n-2) \cdot \cdots \cdot 3(2)(1)\]
+    with $0! = 1$
+\end{itemize}
+
+\vspace{1.25in}
+
+\begin{example}
+How many ways are there to arrange 5 books on a shelf?
+\end{example}
+
+\vspace{1.25in}
+
+\subsection*{Permutations}
+
+\vspace{0.25in}
+
+\begin{example}
+Five people are competing for three prizes: \$1,000, \$500, and \$100. How many different ways can the prizes be awarded?	
+\end{example}
+
+\vspace{1.5in}
+
+\begin{example}
+How many ways are there to award gold, silver, and bronze medals to 8 contestants?
+\end{example}
+
+\newpage 
+
+If there are $n$ items available and we take $r$ at a time, then the total number of permutations is given by 
+\[_nP_r = \frac{n!}{(n-r)!}\]
+
+with $n \geq r$
+
+\vspace{1in}
+
+With permutations, the order in which an item is selected matters.
+
+\begin{itemize}
+	\item Offering various prizes
+	\item Running a race
+	\item Assigning officer positions
+	\item Combination locks and passwords
+\end{itemize}
+
+\vspace{1.25in}
+
+\begin{example}
+How many ways are there of selecting a president, vice president, secretary, and treasurer out of a pool of 10 candidates?
+\end{example}
+
+\vspace{1.5in}
+
+\subsection*{Combinations}
+
+\begin{itemize}
+    \item For permutations, order selection matters, so
+    \begin{center}
+ABC, ACB, BAC, BCA, CAB, and CBA
+\end{center}
+were all different.
+    \item For combinations, order selection \emph{does not} matter, so 
+    \begin{center}
+ABC, ACB, BAC, BCA, CAB, and CBA
+\end{center}
+are all the same.
+\item Notice that there are 6, or $3!$, arrangements of the letters A, B, and C.
+\end{itemize}
+
+\newpage 
+
+If we have $n$ items available and we take $r$ at a time {\color{blue}\textbf{without regard to order of selection}}, then the total number of possible combinations are
+
+\[_nC_r = \frac{n!}{r!(n-r)}!= \binom{n}{r}\]
+
+\vspace{1in}
+
+	Combinations
+	\begin{itemize}
+		\item Awarding equal prizes
+		\item Combinations (not the lock though)
+		\item Committees
+	\end{itemize}
+
+\vspace{1in}
+
+\begin{example}
+Five people are competing for three equal prizes. How many ways can the prizes be awarded?	
+\end{example}
+
+\vspace{1.25in}
+
+\begin{example}
+A committee of 5 is to be formed from a pool of 12 potential candidates. How many committees are possible?
+\end{example}
+
+\vspace{1.25in} 
+
+\begin{example}
+A committee of 5 is to be formed from a pool of 12 potential candidates. The committee is to be made up of 3 managers and 2 accountants. If there are 8 managers and 4 accountants available, how many committees can be formed?
+\end{example}
+
+\vfill 
+
+\end{document}
