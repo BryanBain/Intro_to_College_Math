@@ -1,0 +1,105 @@
+\documentclass{article}
+\usepackage{amsmath, sfmath, pgfplots, multicol}
+\pgfplotsset{compat = newest}
+\usepgfplotslibrary{statistics}
+\usepackage[margin = 0.5in]{geometry}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength\parindent{0cm}
+\pagestyle{empty}
+
+\newcounter{pset}
+\newcounter{key}
+
+
+\begin{document}
+
+\subsection*{Measures of Center P-Set}
+
+For each of the following, round to 2 decimal places when necessary.
+
+\begin{enumerate}
+    \item The weights (in lbs) of 10 dogs is listed. Find the mean, median, and mode weights.
+    \begin{center}
+    \begin{tabular}{cccccccccc}
+        26 & 12 & 100 & 45 & 126 & 84 & 45 & 18 & 44 & 57 \\
+    \end{tabular}
+    \end{center}
+    
+    \item The speeds (in mph) of cars passing a certain checkpoint are measured by radar. The results are shown. Find the mean, median, and mode weights.
+    \begin{center}
+    \begin{tabular}{cccccccccc}
+        41.8 & 41.4 & 44.4 & 43.7 & 45.3 & 45.3 & 41.4 & 40.0 & 47.8 & 43.7 \\
+        41.8 & 40.0 & 43.7 & 39.7 & 41.4 & 44.1 & 44.1 & 44.4 & 48.8 & 41.8
+    \end{tabular}
+    \end{center}
+    
+    \item A comparison is made between summer electric bills of a person who has central air and a person who has window units. Find the mean and median of each sample and then compare the results.
+    \begin{center}
+    \begin{tabular}{c|c|c|c|c|c}
+         &  \textbf{May} & \textbf{June} & \textbf{July} & \textbf{August} & \textbf{September} \\ \hline
+        \textbf{Central} & \$32 & \$64 & \$80 & \$90 & \$65 \\ \hline 
+        \textbf{Window} & \$15 & \$84 & \$99 & \$120 & \$40 \\
+    \end{tabular}
+    \end{center}
+    
+    \item Is it wise to conclude that window unit air conditioners will cost more than central air? Why or why not?
+    
+    \item If the average temperature in July is 79 and the average temperature in February is 27, is the average temperature for both months equal to 53? Explain.
+    
+    \item A company has 80 employees whose salaries are summarized in the table below. Find the mean salary.
+    \begin{center}
+    \begin{tabular}{c|c}
+        \textbf{Salary} & \textbf{Employees} \\ \hline 
+        35,000 -- 39,999 & 17 \\
+        40,000 -- 44,999 & 12 \\
+        45,000 -- 49,999 & 12 \\
+        50,000 -- 54,999 & 15 \\
+        55,000 -- 59,999 & 24 
+    \end{tabular}
+    \end{center}
+    
+    \item The test scores for 40 students are summarized. Find the mean test score.
+    \begin{center}
+    \begin{tabular}{c|c}
+    \textbf{Score} & \textbf{Frequency} \\ \hline 
+        50 -- 59 & 5 \\
+        60 -- 69 & 15 \\
+        70 -- 79 & 6 \\
+        80 -- 89 & 5 \\
+        90 -- 99 & 9
+    \end{tabular}
+    \end{center}
+    
+    \item Michael gets test grades of 75, 79, 82, and 87. He gets an 89 on the final exam. Find Michael's score for the class if tests each count for 15\% and the final exam counts for 40\% of the overall class grade.
+    
+    \item Calculate the GPA for the report card below.
+    \begin{center}
+    \begin{tabular}{c|c}
+        \textbf{Grade} & \textbf{Credit Hours} \\ \hline 
+        A & 4 \\
+        D & 1 \\
+        A & 3 \\
+        C & 3 \\
+        B & 4 \\
+    \end{tabular}
+    \end{center}
+    
+\end{enumerate}
+
+\newpage 
+
+\texttt{Key}
+
+\begin{enumerate}
+    \item $\overline{x} = 55.7$, Med = 45, Mode = 45
+    \item $\overline{x} = 43.23$, Med = 43.7, Mode = 41.8
+    \item Central mean = 66.2, Central median = 65, Window mean = 71.6, Window median = 84; both measures support the claim a window unit's bills are higher during the summer
+    \item No it is not. The sample sizes (one each) are too small and thus do not provide a good representation of the populations.
+    \item No. July has more days than February. You would need to find the weighted mean temperature.
+    \item \$48,562
+    \item 74
+    \item 84.05
+    \item 3.13
+\end{enumerate}
+
+\end{document}
