@@ -1,0 +1,83 @@
+\documentclass{article}
+\usepackage{amsmath, sfmath, pgfplots, multicol}
+\pgfplotsset{compat = newest}
+\usepgfplotslibrary{statistics}
+\usepackage[margin = 0.5in]{geometry}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength\parindent{0cm}
+\pagestyle{empty}
+
+\newcounter{pset}
+\newcounter{key}
+
+
+\begin{document}
+
+\subsection*{Measures of Spread P-Set}
+
+The following are stock prices for Amazon during the last two weeks of July 2022. Round your answers to 2 decimal places.
+
+\begin{center}
+\begin{tabular}{ccccc}
+    113.76 & 118.21 & 122.77 & 124.63 & 122.42 \\
+    121.14 & 114.81 & 120.97 & 122.28 & 134.95 \\
+\end{tabular}
+\end{center}
+
+\begin{enumerate}
+    \item What is the mean of the stock prices? \label{mean}
+    \item What is the range of stock prices?
+    \item What is the population standard deviation?
+    \item What is the population variance?
+    \item What is the sample standard deviation? \label{ssd}
+    \item What is the sample variance?
+    \item Using your answers from questions \ref{mean} and \ref{ssd}, find the minimum and maximum ``usual" stock price values.
+    \item Are there any stock prices that would be considered ``unusual"? If so, which one(s)?
+    \item What is a good consequence of owning a stock with a high standard deviation?
+    \item What is a bad consequence of owning a stock with a high standard deviation?
+\end{enumerate}     \setcounter{pset}{\value{enumi}}
+
+The heights of a group of professional basketball players is given. Round your answers to 1 decimal place.
+
+\begin{center}
+\begin{tabular}{c|c}
+    \textbf{Height} & \textbf{Frequency} \\ \hline 
+    70 -- 71 & 3 \\
+    72 -- 73 & 7 \\
+    74 -- 75 & 16 \\
+    76 -- 77 & 12 \\
+    78 -- 79 & 10 \\
+    80 -- 81 & 4 \\
+    82 -- 83 & 1 \\
+\end{tabular}
+\end{center}
+
+\begin{enumerate}   \setcounter{enumi}{\value{pset}}
+    \item Estimate the mean height of this group of basketball players.
+    \item Estimate the sample standard deviation of this group of basketball players.
+    \item What are the minimum and maximum ``usual" heights of these basketball players?
+    \item Would any listed player's height in this group be considered ``unusual"?
+\end{enumerate}
+
+\newpage 
+
+\texttt{Key}
+
+\begin{enumerate}
+    \item 121.59
+    \item 21.19
+    \item 5.56
+    \item 30.96
+    \item 5.86
+    \item 34.40
+    \item Minimum = 109.87; Maximum = 133.31
+    \item 134.95
+    \item Answers vary
+    \item Answers vary
+    \item 75.8
+    \item 2.8
+    \item Minimum = 70.2; Maximum = 81.4
+    \item The player in the 82 -- 83 height class
+\end{enumerate}
+
+\end{document}
