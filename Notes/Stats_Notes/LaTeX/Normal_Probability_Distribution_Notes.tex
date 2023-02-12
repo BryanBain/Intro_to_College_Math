@@ -1,0 +1,155 @@
+\documentclass{article}
+\usepackage{amsmath, tikz, tcolorbox, array, multicol, sfmath, enumerate, pgfplots}
+\renewcommand{\familydefault}{\sfdefault}
+\pgfplotsset{compat=newest}
+\usepackage[top = 0.5in, right = 1.25in, bottom =0.5in, left = 1.25in]{geometry}
+\pagestyle{empty}
+\raggedright
+
+\newcounter{example}[section]
+\newenvironment{example}[1][]{\refstepcounter{example}\par\medskip
+   {\color{red}\textbf{Example~\theexample. #1}}}{\medskip}
+
+\begin{document}
+
+\section*{Normal Probability Distribution}
+
+\begin{tcolorbox}[colframe=orange!70!white, coltitle=black, title=\textbf{Summary}]
+\begin{enumerate}
+    \item The normal probability distribution is a common probability distribution often called a ``bell curve."
+    \item Normal probability distribution is a very common one in statistics.
+\end{enumerate}
+\end{tcolorbox}
+\vspace{0.25in}
+
+\subsection*{The Standard Normal Distribution}
+
+A {\color{blue}\textbf{standard normal distribution}} is a continuous probability distribution, utilizing z-scores, with the following properties:
+\begin{itemize}
+	\item The graph is bell-shaped
+	\item The mean is 0
+	\item The standard deviation is 1
+    \item The total area under the graph is equal to 1.
+	\item There is a correspondence between area and probability (relative frequency). Some probabilities can be found by identifying the corresponding areas in the graph.
+	\begin{itemize}
+	    \item For instance, the area to the left of $z = 0.24$ is denoted $P(z < 0.24)$
+	    \item The area to the right of $z = 2.12$ is $P(z > 2.12)$
+	    \item The area between $z = -1.41$ and $z = 1.55$ is $P(-1.41 < z < 1.55)$
+	    \item The area of any particular $z$-score is 0; \textit{i.e.} $P(z = 1)$ is 0
+	\end{itemize}
+	\item The curve cannot fall below the $x$-axis.
+\end{itemize}
+
+\vspace{0.5in}
+
+\subsubsection*{Find Area/Probability Given Z-Score(s)}
+
+\vspace{0.5in}
+
+\begin{center}
+\fbox{\parbox{3.75in}{
+\texttt{Pro Tip:} \newline
+
+Sketch a curve when finding probabilities of normal distributions.}}
+\end{center}
+
+\vspace{0.5in}
+
+\begin{example}
+Find each probability/area.
+\begin{multicols}{3}
+\begin{enumerate}[(a)]
+	\item $P(z < 0.24)$
+	\item $P(z > 2.12)$
+	\item $P(-1.41 < z < 1.55)$
+\end{enumerate}
+\end{multicols}
+\end{example}
+
+\newpage 
+
+\subsubsection*{Find Z-Score For a Given Area/Probability}
+
+Area is \emph{cumulative} and will typically be coming in from the \textbf{\underline{left}} on the graph. \newline\\
+
+Still a good idea to sketch the graphs.
+
+\vspace{0.5in}
+
+\begin{example}
+Find the $z$-score that corresponds to an area of 0.4216 to the left. Round your answer to 2 decimal places.
+\end{example}
+
+\vfill 
+
+\begin{example}
+Find the $z$-score that corresponds to the 90th percentile.
+\end{example}
+
+\vfill 
+
+\begin{example}
+Find the $z$-scores that correspond to each.
+\begin{multicols}{3}
+\begin{enumerate}[(a)]
+    \item Middle 90\%
+    \item Middle 95\%
+    \item Middle 99\%
+\end{enumerate}
+\end{multicols}
+\end{example}
+
+\vfill 
+\newpage 
+
+\subsection*{Applied Normal Probability Distribution}
+
+\begin{itemize}
+    \item We could find $z$-score of an observed value if we know mean and standard deviation.
+    \item Technology allows us to avoid this process.
+\end{itemize}
+
+\begin{example}
+A classic example of normal probability distribution is IQ scores. Most IQ tests have a mean of 100 and a standard deviation of 15. Find each probability.
+\begin{enumerate}[(a)]
+\begin{multicols}{3}
+    \item $P(\text{IQ} > 100)$
+    \item $P(\text{IQ} \geq 100)$
+    \item $P(\text{IQ} < 110)$
+\end{multicols}
+\vfill 
+\begin{multicols}{3}
+    \item $P(95 < \text{IQ} < 125)$
+    \item $P(\text{IQ} > 135)$
+    \item $P(\text{IQ} < 80)$
+\end{multicols}
+\end{enumerate}
+\end{example}
+\vfill 
+\begin{quote}
+``People who boast about their IQ are losers." \newline\\
+    -- Stephen Hawking
+\end{quote}
+
+\newpage 
+
+\subsubsection*{Find Specific Value(s) For a Given Area/Probability}
+
+\begin{example}
+A study was done to test the reaction time of subjects under poor lighting to simulate evening-time driving. \newline
+
+Subjects were to press a buzzer as soon as they saw something appear on the side of their screen. \newline
+
+The mean reaction time was 0.85 seconds with a standard deviation of 0.18 seconds. \newline 
+
+Find the times corresponding to each percentile score.
+\begin{enumerate}[(a)]
+\begin{multicols}{3}
+    \item 25th percentile
+    \item 50th percentile
+    \item 95th percentile
+\end{multicols}
+\end{enumerate}
+\end{example}
+
+\end{document}

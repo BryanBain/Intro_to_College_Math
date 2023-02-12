@@ -1,0 +1,127 @@
+\documentclass{article}
+\usepackage{amsmath, tikz, tcolorbox, array, multicol, sfmath, enumerate, pgfplots}
+\renewcommand{\familydefault}{\sfdefault}
+\pgfplotsset{compat=newest}
+\usepackage[margin = 0.5in]{geometry}
+\pagestyle{empty}
+\raggedright
+
+\newcounter{example}[section]
+\newenvironment{example}[1][]{\refstepcounter{example}\par\medskip
+   {\color{red}\textbf{Example~\theexample. #1}}}{\medskip}
+\newcommand{\dx}{\, \mathrm{d}x}
+
+\begin{document}
+
+\section*{Binomial Probability Distribution}
+
+\begin{tcolorbox}[colframe=orange!70!white, coltitle=black, title=\textbf{Summary}]
+\begin{enumerate}
+    \item Binomial distributions are a special type of probability distribution that allows us to find outcomes that are relevant to two categories: success or failure.
+    \item The formula for calculating binomial probability distribution is 
+    \[	P(x) = {_n}C_r \cdot p^x \cdot q^{n-x}	\]
+for $x = 0, \, 1, \, 2, \, \dots, n$
+\end{enumerate}
+\end{tcolorbox}
+\vspace{0.25in}
+
+\subsection*{Qualifications To Be a Binomial Probability Distribution}
+
+\begin{enumerate}
+	\item The outcomes are success or failure
+	\item There is a fixed number of trials $n$
+	\item The probability of success, $p$, never changes
+	\item The outcomes are independent of one another
+	\end{enumerate}
+\vspace{0.25in}
+	
+\begin{example}
+Decide whether each of the following experiments is a binomial experiment. If it is, specify the values for $n$, $p$, and $x$. If it isn't, explain why.
+	\begin{enumerate}[(a)]  \setlength{\itemsep}{0.75in}
+	\item A certain surgical procedure has an 85\% success rate. A doctor performs the procedure on 8 patients. The random variable represents the number of successful surgeries for the 8 patients.
+	\item A jar contains 5 red marbles, 9 blue marbles, and 4 green marbles. You randomly select three marbles without replacement. The random variable represents the number of red marbles.
+	\end{enumerate}
+\end{example}
+\vspace{0.5in}
+
+\subsection*{Developing the Formula}
+
+We can list out one possible example for a binomial distribution as follows: \textit{SFS}. Note that there are 2 successes and 1 failure. This is also the same result as \textit{FSS} and \textit{SSF}.
+\newline\\
+
+
+Thus, \underline{the order in which success and failure occur in a binomial distribution is not important}. Hence, combinations will play a factor in the binomial formula.
+\newline\\
+
+
+Also, if we let $q$ represent the probability of failure, then the probability of $x$ successes out of $n$ trials is calculated by the Binomial Formula:
+	\[	P(x) = {_n}C_r \cdot p^x \cdot q^{n-x}	\]
+for $x = 0, \, 1, \, 2, \, \dots, n$.
+
+\newpage 
+
+\begin{example}
+A certain surgical procedure has an 85\% success rate. A doctor performs the procedure on 8 patients. Find the probability that the surgery is successful for
+\begin{multicols}{3}
+	\begin{enumerate}[(a)]
+	\item 5 patients
+	\item 8 patients
+	\item 0 patients
+	\end{enumerate}
+\end{multicols}
+\end{example}
+
+\vspace{1in}
+
+We can also use cumulative binomial functions to find the results of adding from 0 to $x$ number of successes.
+
+\begin{example}
+A certain surgical procedure has an 85\% success rate. A doctor performs the procedure on 8 patients. Find the probability that the surgery is successful for
+\begin{multicols}{3}
+	\begin{enumerate}[(a)]
+	\item 6 patients or less
+	\item At least 3 patients
+	\item Fewer than 5 patients
+	\end{enumerate}
+\end{multicols}
+\end{example}
+
+\vspace{1in}
+
+\subsection*{Parameters for Binomial Distributions} 
+\vspace{0.15in}
+
+\begin{center}
+\begin{tabular}{cc}
+    \textbf{Mean (Expected Value):} & $\mu = np$ \\
+    \textbf{Variance:} & $\sigma^2 = npq$ \\
+    \textbf{Standard Deviation:} & $\sigma = \sqrt{npq}$
+\end{tabular}
+\end{center}
+
+\begin{example}
+\begin{enumerate}[(a)]  \setlength{\itemsep}{0.75in}
+    \item According to recent numbers, only 4\% of people have type AB blood. Out of a group of 500 people, how many of them would you \emph{expect} to have type AB blood?
+    \item What is the standard deviation for the number of people with type AB blood?
+    \item Recall that the range rule of thumb can be used to find minimum and maximum ``usual" values.
+\begin{center}
+Min Usual Value = $\mu - 2\sigma$	\\
+Max Usual Value = $\mu + 2\sigma$
+\end{center}
+
+For groups of 500 randomly selected people, find the minimum and maximum usual number of people with type AB blood.
+\end{enumerate}
+\end{example}
+
+\newpage 
+
+\begin{example}
+\begin{enumerate}[(a)]  \setlength{\itemsep}{0.75in}
+    \item You take a multiple-choice test that consists of 25 questions. If each answer has 4 choices (A--D), what is the expected number of questions you would get correct by pure guessing?
+    \item What is the standard deviation for the number of questions guessed correctly?
+    \item Find the minimum and maximum ``usual`` number of questions guessed correctly. Does this seem like a good strategy for test preparation?
+\end{enumerate}
+\end{example}
+
+
+\end{document}

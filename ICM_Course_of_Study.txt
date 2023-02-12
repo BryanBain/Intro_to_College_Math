@@ -1,0 +1,64 @@
+# Calculus Semester #
+
+- Functions
+	* Basics
+	* Operations
+	* Compositions
+	* Exponential
+	* Logarithmic
+
+- Limits
+	* Numeric and Graphical Limits
+	* Algebraic Limits
+	* Continuity
+
+- Derivatives
+	* Definition of derivative
+	* Average & instantaneous rates of change
+	* Power rule
+	* Sum, difference, product, and quotient rules
+	* Chain rule
+	* Derivatives of exponential and logarithmic functions
+
+- Integrals
+	* Riemann sum and area
+	* Indefinite integrals
+	* Definite integrals
+	* FTC
+
+# Statistics Semester #
+
+- Introduction
+	* Data Types
+	* Sampling Methods
+	* Experiments and Observational Studies
+
+- Visual Displays of Data
+	* Bar Charts and Pie Graphs
+	* Histograms
+	* Deceptive displays of data
+
+- Describing Data
+	* Measures of Center
+	* Measures of Spread
+	* Measures of Position
+
+- Probability
+	* Probability basics
+	* Adding probabilities
+	* Multiplying probabilities
+	* Conditional probabilities
+	* Counting techniques
+
+- Linear Regression
+	* Scatterplots
+	* Linear regression equation
+
+- Random Variables
+	* Discrete random variables
+	* Expected value
+	* Binomial distribution
+
+- Normal Distribution
+	* Standard normal distribution
+	* Applied normal distribution
