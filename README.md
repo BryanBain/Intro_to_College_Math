@@ -38,10 +38,10 @@
     <li>Probability: AND</li>
     <li>Probability: OR</li>
     <li>Speed Counting</li>
-    <li>Discrete Probability Distributions</li>
-    <li>Binomial Probability Distributions</li>
-    <li>Standard Normal Distribution</li>
-    <li>Normal Distribution in the Real World</li>
+    <li>Discrete Probability Distribution</li>
+    <li>Binomial Probability Distribution</li>
+    <li>Normal Probability Distribution</li>
+    <!--- <li>Normal Distribution in the Real World</li> --->
     <li>Sampling Distributions</li>
     <li>Confidence Intervals</li>
 </ol>
